@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Sobre</title>
+{% endblock %}
+
+{% block content %}
+    <div class="info">
+        <img src="{{data.avatar_url}}" alt="Imagem de {{data.name}}">
+        <h1>{{data.name}}</h1>
+        <h3>{{data.description}}</h3>
+        <ul>
+            {% for tech in data.techs %}
+                <li>{{tech.name}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="sociais">
+        {% for social in data.socialLinks %}
+            <a href="{{social.url}}">{{social.name}}</a>
+        {% endfor %}
+    </div>
+{% endblock %}

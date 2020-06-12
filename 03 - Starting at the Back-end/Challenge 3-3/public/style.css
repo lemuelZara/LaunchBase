@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background: #ccc;
+    padding: 30px;
+}
+
+header div {
+    text-align: center;
+}
+
+header div a {
+    margin: 0 30px;
+    text-decoration: none;
+    color: #000;
+}
+
+.error404 {
+    text-align: center;
+    padding: 40px;
+}
+
+.info {
+    text-align: center;
+}
+
+.info img {
+    margin: 32px 0;
+    border-radius: 50%;
+}
+
+.info h1 {
+    font-size: 34px;
+    line-height: 44px;
+}
+
+.info h1:hover {
+    color: rgb(113, 89, 193);
+    transition: color 700ms;
+}
+
+.info h3 {
+    max-width: 700px;
+    margin: 32px auto;
+}
+
+.info ul {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.info ul li {
+    margin: 0 32px;
+    padding: 20px;
+    background: rgb(113, 89, 193);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sociais {
+    text-align: center;
+}
+
+.sociais a {
+    text-decoration: none;
+    margin: 0 20px;
+    color: rgb(113, 89, 193);
+    border-bottom: 2px solid rgb(113, 89, 193);
+}
+
+.sociais a:hover {
+    opacity: 0.8;
+    transition: color 800ms;
+}
+
+.cards {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.cards .card {
+    padding: 25px;
+    background: #33264D;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.cards .card .card-content {
+    margin-top: 40px;
+}
+
+.cards .card .card-content h3 {
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.cards .card .card-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.cards .card .card-info .card-price {
+    background: rgb(4, 211, 97);
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cards .card .open {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    cursor: pointer;
+}
+
+.course {
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+}
+
+.open-course {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 700ms;
+}
+
+.open-course:hover {
+    color: rgb(4, 211, 97);
+}
+
+
+

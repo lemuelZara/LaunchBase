@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Curso -
+        {{dataCourse.name}}</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <section class="cards course">
+        <div class="card" id="{{dataCourse.name}}">
+            <img src="{{dataCourse.url}}" alt="">
+
+            <div class="card-content">
+                <h3>{{dataCourse.description}}</h3>
+            </div>
+
+            <a class="open-course" href="https://rocketseat.com.br/{{dataCourse.name}}" target="_blank">
+                Acessar a página do curso
+                <i class="material-icons">keyboard_arrow_right</i>
+            </a>
+        </div>
+    </section>
+{% endblock %}

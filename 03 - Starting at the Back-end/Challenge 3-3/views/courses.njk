@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Conteúdos</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <section class="cards">
+        {% for course in courses %}
+            <div class="card" id="{{course.name}}">
+                <img src="{{course.url}}" alt="">
+
+                <div class="card-content">
+                    <h3>{{course.description}}</h3>
+                </div>
+
+                <div class="card-info">
+                    <p>
+                        <strong>{{course.modules}}</strong>
+                        Módulos</p>
+                    <p class="card-price">R$
+                        {{course.price}}</p>
+                </div>
+
+                <a class="open">
+                    <i class="material-icons">open_in_new</i>
+                </a>
+            </div>
+        {% endfor %}
+    </section>
+    <script src="script.js"></script>
+{% endblock %}
