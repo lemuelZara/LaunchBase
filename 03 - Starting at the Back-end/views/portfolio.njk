@@ -1,105 +1,36 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
 
-<title>Portfolio - Lemuel</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Portfolio - Lemuel</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 {% endblock %}
 
 {% block content %}
+    <div id="wrapper">
+        <h1>Aulas</h1>
+    </div>
 
-<div id="wrapper">
-    <h1>Aulas</h1>
-</div>
+    <section class="cards">
+        {% for item in items %}
+            <div class="card" id="{{item.id}}">
+                <div class="card-img-container {{ 'featured-wrapper' if item.featured}}">
+                    <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}">
+                    {% if item.featured %}
+                        <div class="featured">Featured</div>
+                    {% endif %}
+                </div>
+                <div class="card-content">
+                    <p>{{item.title}}</p>
+                </div>
+                <div class="card-info">
+                    <p>{{item.duration}}</p>
+                    <p class="card-price">{{item.price}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
 
-<section class="cards">
-    <div class="card" id="aTf8QTjw4RE">
-        <div class="card-img-container">
-            <img src="https://img.youtube.com/vi/aTf8QTjw4RE/maxresdefault.jpg" alt="TypeScript">
-        </div>
-        <div class="card-content">
-            <p>TypeScript com NodeJS do jeito certo! | Diego Fernandes</p>
-        </div>
-        <div class="card-info">
-            <p>43 min</p>
-            <p class="card-price">Free</p>
-        </div>
-    </div>
-    <div class="card" id="ngVU74daJ8Y">
-        <div class="card-img-container">
-            <img src="https://img.youtube.com/vi/ngVU74daJ8Y/maxresdefault.jpg" alt="Dark">
-        </div>
-        <div class="card-content">
-            <p>Tema light/dark com React, Styled Components e TypeScript | Code/Drops</p>
-        </div>
-        <div class="card-info">
-            <p>33 min</p>
-            <p class="card-price">Free</p>
-        </div>
-    </div>
-    <div class="card" id="ghTrp1x_1As">
-        <div class="card-img-container">
-            <img src="https://img.youtube.com/vi/ghTrp1x_1As/maxresdefault.jpg" alt="API">
-        </div>
-        <div class="card-content">
-            <p>O que é API? REST e RESTful? | Mayk Brito</p>
-        </div>
-        <div class="card-info">
-            <p>34 min</p>
-            <p class="card-price">Free</p>
-        </div>
-    </div>
-    <div class="card" id="aTf8QTjw4RE">
-        <div class="card-img-container">
-            <img src="https://img.youtube.com/vi/aTf8QTjw4RE/maxresdefault.jpg" alt="TypeScript">
-        </div>
-        <div class="card-content">
-            <p>TypeScript com NodeJS do jeito certo! | Diego Fernandes</p>
-        </div>
-        <div class="card-info">
-            <p>43 min</p>
-            <p class="card-price">Free</p>
-        </div>
-    </div>
-    <div class="card" id="ngVU74daJ8Y">
-        <div class="card-img-container">
-            <img src="https://img.youtube.com/vi/ngVU74daJ8Y/maxresdefault.jpg" alt="Dark">
-        </div>
-        <div class="card-content">
-            <p>Tema light/dark com React, Styled Components e TypeScript | Code/Drops</p>
-        </div>
-        <div class="card-info">
-            <p>33 min</p>
-            <p class="card-price">Free</p>
-        </div>
-    </div>
-    <div class="card" id="ghTrp1x_1As">
-        <div class="card-img-container">
-            <img src="https://img.youtube.com/vi/ghTrp1x_1As/maxresdefault.jpg" alt="API">
-        </div>
-        <div class="card-content">
-            <p>O que é API? REST e RESTful? | Mayk Brito</p>
-        </div>
-        <div class="card-info">
-            <p>34 min</p>
-            <p class="card-price">Free</p>
-        </div>
-    </div>
-</section>
-
-<div class="modal-overlay">
-    <div class="modal">
-        <a class="close-modal">
-            <i class="material-icons">close</i>
-        </a>
-
-        <div class="modal-content">
-            <iframe src="" frameborder="0"></iframe>
-        </div>
-    </div>
-</div>
-
-<script src="scripts.js"></script>
-
+    <script src="/scripts.js"></script>
 {% endblock %}
