@@ -20,4 +20,4 @@ module.exports = [
         price: 'Free',
         featured: true,
     }
-]
+] 
