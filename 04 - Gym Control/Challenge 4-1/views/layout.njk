@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/css/reset.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="shortcut icon" href="/assets/images/class.png" type="image/x-icon">
+
+        {% block head %}
+            <title>Private Class</title>
+        {% endblock head %}
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="/assets/images/logo.svg" alt="Class Photo">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="">Teachers</a></li>
+                    <li><a href="">Students</a></li>
+                </ul>
+            </nav>
+        </header>
+        {% block content %}{% endblock content %}
+    </body>
+</html>
