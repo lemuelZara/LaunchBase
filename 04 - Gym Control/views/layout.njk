@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/assets/css/reset.css">
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon" />
+
+        {% block head %}
+            <title>Gym Manager</title>
+        {% endblock head %}
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="/assets/images/dumbell.svg" alt="Gym Photo">
+            <nav>
+                <ul class="nav_links">
+                    <li><a class="active" href="/">Instructors</a></li>
+                    <li><a href="/">Members</a></li>
+                </ul>
+            </nav>
+            <a class="nav_button" href="/"><button>Contact</button></a>
+        </header>
+        {% block content %}{% endblock content %}
+    </body>
+</html>
