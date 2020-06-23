@@ -1,0 +1,14 @@
+{
+    "teachers": [
+        {
+            "id": 1,
+            "avatar_url": "http://google.com",
+            "name": "Lemuel ",
+            "birth": 1591142400000,
+            "schooling": "Ensino Médio Completo",
+            "type_class": "Presencial",
+            "occupation": "Pepega",
+            "created_at": 1592940429493
+        }
+    ]
+}
