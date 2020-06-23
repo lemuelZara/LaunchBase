@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
-
 :root {
     --primary-color: #FF3042;
 }
+
 /*
 Paleta de cores:
 #19E8D7
@@ -11,8 +11,8 @@ Paleta de cores:
 #74D990
 #203F4C
 */
+
 body {
-    
     font-family: 'Nunito', sans-serif;
     background-color: var(--primary-color);
 }
@@ -94,7 +94,7 @@ button {
     }
 }
 
-.card .avatar { 
+.card .avatar {
     border-radius: 8px 0 0 8px;
     background: url('https://source.unsplash.com/collection/8353395/600x600') no-repeat center center / cover;
 }
@@ -112,11 +112,10 @@ button {
     border: none;
 }
 
-.details h3,
-.details .item div:nth-child(1) {
+.details h3, .details .item div:nth-child(1) {
     font-size: 15px;
     line-height: 25px;
-    color: #000;    
+    color: #000;
     font-weight: bold;
     letter-spacing: 0.6px;
 }
@@ -142,4 +141,29 @@ button {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
+}
+
+input {
+    padding: 0;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+
+input[type="radio"] {
+    margin: 0;
+    width: initial;
+    margin-right: 4px;
+}
+
+input::placeholder {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    margin: 25px 0 0 0;
+    background-color: var(--primary-color);
+    width: 100%;
 }

@@ -1,0 +1,22 @@
+{
+    "instructors": [
+        {
+            "id": 1,
+            "avatar_url": "http://google.com",
+            "name": "Lemuel ",
+            "birth": 1591142400000,
+            "gender": "M",
+            "services": "Javascript",
+            "created_at": 1592935477708
+        },
+        {
+            "id": 2,
+            "avatar_url": "http://google.com",
+            "name": "tapioca",
+            "birth": 1591142400000,
+            "gender": "F",
+            "services": "fghfghfghfg",
+            "created_at": 1592935549158
+        }
+    ]
+}

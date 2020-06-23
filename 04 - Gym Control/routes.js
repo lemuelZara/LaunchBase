@@ -1,4 +1,5 @@
 const express = require('express')
+const instructors = require('./instructors')
 
 const routes = express.Router()
 
@@ -10,12 +11,10 @@ routes.get('/instructors', function (request, response) {
     return response.render('layout')
 })
 
-routes.get('/', function (request, response) {
-    return response.send('layout')
+routes.get('/instructors/create', function (request, response) {
+    return response.render('instructors/create')
 })
 
-routes.get('/', function (request, response) {
-    return response.render('layout')
-})
+routes.post('/instructors', instructors.post)
 
 module.exports = routes
