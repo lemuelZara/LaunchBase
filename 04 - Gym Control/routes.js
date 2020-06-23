@@ -8,7 +8,7 @@ routes.get('/', function (request, response) {
 })
 
 routes.get('/instructors', function (request, response) {
-    return response.render('layout')
+    return response.render('instructors/index')
 })
 
 routes.get('/instructors/create', function (request, response) {
