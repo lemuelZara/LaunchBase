@@ -78,3 +78,55 @@ exports.edit = function (request, response) {
         instructor
     })
 }
+
+exports.put = function (request, response) {
+    let index = 0
+
+    const { id } = request.body
+
+    const foundInstructor = data.instructors.find((instructor, foundIndex) => {
+        if (instructor.id == id) {
+            index = foundIndex
+
+            return true
+        }
+    })
+
+    if (!foundInstructor) {
+        return response.send('Instructor not found!')
+    }
+
+    const instructor = {
+        ...foundInstructor,
+        ...request.body,
+        birth: Date.parse(request.body.birth)
+    }
+
+    data.instructors[index] = instructor
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 4), function (err) {
+        if (err) {
+            return response.send('Write file error!')
+        }
+
+        return response.redirect(`/instructors/${id}`)
+    })
+}
+
+exports.delete = function (request, response) {
+    const { id } = request.body
+
+    const filteredInstructors = data.instructors.filter(instructor => {
+        return instructor.id != id
+    })
+
+    data.instructors = filteredInstructors
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 4), function (err) {
+        if (err) {
+            return response.send('Write file error!')
+        }
+
+        return response.redirect('/instructors')
+    })
+}
