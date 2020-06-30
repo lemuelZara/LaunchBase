@@ -1,0 +1,32 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Editar</title>
+{% endblock head %}
+
+{% block content %}
+    <div class="card">
+        <section class="avatar"></section>
+
+        <section class="details">
+            <form action="/teacher?_method=PUT" method="POST">
+                <h3>Editar Professor</h3>
+
+                {% include 'teacher/fields.njk' %}
+
+                <input type="hidden" name="id" value="{{teacher.id}}">
+            </form>
+
+            <form method="POST" action="/teacher?_method=DELETE">
+                <input type="hidden" name="id" value="{{teacher.id}}">
+                <button type="submit">Deletar</button>
+            </form>
+        </section>
+    </div>
+    <script type="text/javascript">
+        const avatar = document.querySelector('.avatar')
+        const avatar_url = {{ teacher.avatar_url | dump | safe }}
+
+        avatar.style.background = `url(${avatar_url}) no-repeat center center / cover`
+    </script>
+{% endblock content %}
