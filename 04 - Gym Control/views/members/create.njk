@@ -1,0 +1,17 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Members</title>
+{% endblock head %}
+
+{% block content %}
+    <form class="card" method="POST" action="/members">
+        <section class="avatar"></section>
+        <section class="details">
+            <h3>Novo membro</h3>
+
+            {% include 'members/fields.njk' %}
+
+        </section>
+    </form>
+{% endblock content %}

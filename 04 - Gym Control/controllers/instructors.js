@@ -1,6 +1,12 @@
 const fs = require('fs')
-const data = require('./data.json')
-const { age, date } = require('./utils')
+const data = require('../data.json')
+const { age, date } = require('../utils')
+
+exports.index = function (request, response) {
+    return response.render('instructors/index', {
+        instructors: data.instructors
+    })
+}
 
 exports.post = function (request, response) {
     const keys = Object.keys(request.body)
@@ -71,7 +77,7 @@ exports.edit = function (request, response) {
 
     const instructor = {
         ...foundInstructor,
-        birth: date(foundInstructor.birth)
+        birth: date(foundInstructor.birth).iso
     }
 
     return response.render('instructors/edit', {
@@ -99,6 +105,7 @@ exports.put = function (request, response) {
     const instructor = {
         ...foundInstructor,
         ...request.body,
+        id: Number(id),
         birth: Date.parse(request.body.birth)
     }
 
@@ -129,4 +136,8 @@ exports.delete = function (request, response) {
 
         return response.redirect('/instructors')
     })
+}
+
+exports.create = function (request, response) {
+    return response.render('instructors/create')
 }
